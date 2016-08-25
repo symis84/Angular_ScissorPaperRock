@@ -7,6 +7,7 @@
 
 ## Build / Test / Run 
 
+- grunt clean
 - grunt serve:dist // project building and running (dist mode)
 
 other commands:
@@ -14,7 +15,4 @@ other commands:
 - grunt test //project testing  
 - grunt serve //project running (develop mode)
 
-## Demo
-
-- Video demo url: https://youtu.be/p6_H25b7CK8
 
