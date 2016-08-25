@@ -1,0 +1,74 @@
+<div class="row">
+    <div class="col-md-4 human">
+    	<div class="human_container">
+    		<div class="human_title">
+    			User
+    		</div>
+    		<ul>
+        		<li class="col-lg-4 col-md-4 col-sm-4 col-xs-4 select_shape">
+        			<button class="Rock btn-shape" ng-click="selectCard('Rock_shape_chosen')"></button>
+        		</li>
+        		<li class="col-lg-4 col-md-4 col-sm-4 col-xs-4 select_shape">
+        			<button class="Paper btn-shape" ng-click="selectCard('Paper_shape_chosen')"></button>
+        		</li>
+        		<li class="col-lg-4 col-md-4 col-sm-4 col-xs-4 select_shape">
+        			<button class="Scissor btn-shape" ng-click="selectCard('Scissor_shape_chosen')"></button>
+        		</li>
+        	</ul>
+        	<div ng-class="
+        		{ 	
+        			'Rock_shape_chosen': userCard=='Rock_shape_chosen', 
+        			'Paper_shape_chosen':  userCard=='Paper_shape_chosen', 
+        			'Scissor_shape_chosen':  userCard=='Scissor_shape_chosen'
+        		}">
+        	</div>
+    	</div>
+    </div>
+    <div class="col-md-4 score">
+    	<div>
+		  	<div class="score_title">Score</div>
+          	<div class="score_wins col-md-4"> 
+            	<div class="wins_title">Wins</div>
+            	<div class="wins_number">{{winsUser}}</div>
+          	</div>
+          	<div class="score_ties col-md-4"> 
+            	<div class="ties_title">Ties</div>
+            	<div class="ties_number">{{ties}}</div>
+          	</div>
+          	<div class="score_wins col-md-4"> 
+            	<div class="wins_title">Wins</div>
+            	<div class="wins_number">{{winsComputer}}</div>
+          	</div>
+          	<div class="round col-md-12"> 
+            	Result
+          	</div>
+          	<div class="time col-md-12"> 
+            	<!--this.state.time_countdown-->
+            	<span ng-if="gameStarted">{{count}}</span>
+            	<div ng-if="showResult" ng-class="
+            		{ 
+            			'result_paper_rock': resultText=='result_paper_rock',
+            			'result_rock_scissor':  resultText=='result_rock_scissor',
+            			'result_scissor_paper':  resultText=='result_scissor_paper', 
+            			'result_tie':  resultText=='result_tie'
+            		}">
+            	</div>
+          	</div>
+          	<div class="restartButton col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            	<a ng-if="!gameStarted" class="btn" ng-click="startGame()">Start/Restart</a>
+          	</div>
+      </div>
+    </div>
+    <div class="col-md-4 computer">
+    	<div>
+    		<div class="computer_title">Computer</div>
+    		<div ng-class="
+    			{ 
+    				'Rock_shape_chosen': computerCard=='Rock_shape_chosen',
+    				'Paper_shape_chosen':  computerCard=='Paper_shape_chosen',
+    				'Scissor_shape_chosen':  computerCard=='Scissor_shape_chosen'
+    			}">
+    		</div>
+    	</div>
+    </div>
+</div>
