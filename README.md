@@ -8,9 +8,6 @@
 ## Build / Test / Run 
 
 - grunt clean
-- grunt serve:dist // project building and running (dist mode)
-
-other commands:
 - grunt build //project building
 - grunt test //project testing  
 - grunt serve //project running (develop mode)
